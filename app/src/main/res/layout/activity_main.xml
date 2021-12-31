@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/design_default_color_secondary"
+android:outlineAmbientShadowColor="@color/black"
+tools:context=".MainActivity">
+
+
+<ListView
+    android:id="@+id/todolist"
+    android:layout_width="match_parent"
+    android:layout_height="354dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="1dp"
+    android:layout_marginBottom="1dp"
+
+    app:layout_constraintBottom_toTopOf="@+id/add"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.702" />
+
+<TextView
+    android:id="@+id/todocount"
+    android:layout_width="224dp"
+    android:layout_height="182dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="32dp"
+    android:text="You have X ToDos in today"
+
+    android:textSize="15dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/add"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.817"
+    tools:ignore="MissingConstraints" />
+
+<Button
+    android:id="@+id/add"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="28dp"
+    android:text="Add Todo"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/todocount"
+    tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="273dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="26dp"
+        android:background="@color/teal_200"
+        android:text="Button"
+        android:textColor="#00212121"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todolist" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
